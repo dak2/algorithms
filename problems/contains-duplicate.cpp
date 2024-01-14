@@ -1,13 +1,26 @@
 // ref. https://leetcode.com/problems/contains-duplicate/
 
+// below solution is O(N^2)
+// class Solution {
+// public:
+//   bool containsDuplicate(vector<int>& nums) {
+//     int last
+//     for (int i = 0; i < nums.size() - 1; i++) {
+//       for (int j = i + 1; j < nums.size)
+//     }
+//     return false;
+//   }
+// };
+
+// use hash map has key value
 class Solution {
 public:
   bool containsDuplicate(vector<int>& nums) {
-    for (int i = 0; i < nums.size(); i++) {
-      for (int j = 0; j < nums.size(); j++) {
-        if (j == i || nums[i] != nums[j]) continue;
-        return true;
-      }
+    unordered_map<int, int> map;
+    for (int num : nums) {
+        if (map[num] >= 1)
+            return true;
+        map[num]++;
     }
     return false;
   }
