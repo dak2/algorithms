@@ -1,5 +1,3 @@
-// ref. https://atcoder.jp/contests/abs/tasks/abc088_b
-
 #include<iostream>
 #include<algorithm>
 #include<vector>
